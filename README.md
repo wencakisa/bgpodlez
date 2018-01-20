@@ -1,24 +1,17 @@
-# README
+# bgpodlez
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Портал, в който се добавят най-новите неща (песни, албуми, видеа, колаборации, събития) от български артисти, не дотам познати на широката общественост (т.нар. “ъндърграунд”).
 
-Things you may want to cover:
+# TODO
+* *Чекпойнт 1 (14.02.2018):* Потребител с определени права от сървъра ще може лесно да добавя новина и да вижда лист с всички добавени новини.
+  * HTML (EmbeddedRuby as a template engine) - базова структура на сайта
+  * CSS (Materialize as a style framework) - основни компоненти (navigation, footer, home page (show top <n> newest), news list page)
+* *Чекпойнт 2 (14.03.2018):* добавки към навигацията, search bar, page filters
+* *Чекпойнт 3 (14.04.2018):* JavaScript модификации по основните компоненти на сайта (полета, pop-ups, ефекти (jQuery евентуално) и т.н.)
+* **Срок за предаване**: 14.02.2018
 
-* Ruby version
+# Tech
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ruby on Rails (5.1.4) as a backend (EmbeddedRuby as a template language)
+* [Materialize Sass](https://github.com/mkhairi/materialize-sass) as a style framework
+* jQuery
