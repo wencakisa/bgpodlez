@@ -16,7 +16,11 @@
 
 <div class="row">
   <div class="col s8 m8 offset-s2 offset-m2">
-    <h4>Последни новини</h4>
-    <%= render 'shared/posts_list' %>
+    <% if @posts.empty? %>
+      <h4>За жалост все още няма добавени новини ... :(</h4>
+    <% else %>
+      <h4>Последни новини</h4>
+      <%= render 'shared/posts_list' %>
+    <% end %>
   </div>
 </div>

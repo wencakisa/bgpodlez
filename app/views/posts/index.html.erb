@@ -4,3 +4,20 @@
     <%= render 'shared/posts_list' %>
   </div>
 </div>
+
+<% if user_signed_in? %>
+  <!-- Element Showed -->
+  <div class="fixed-action-btn">
+    <%= link_to new_post_path, id: 'menu', class: 'btn-floating btn-large waves-effect waves-light' do %>
+      <i class="material-icons">mode_edit</i>
+    <% end %>
+  </div>
+
+  <!-- Tap Target Structure -->
+  <div class="tap-target" data-activates="menu">
+    <div class="tap-target-content white-text">
+      <h5>Добави новина</h5>
+      <p>Кликни върху този бутон за да добавиш новина!</p>
+    </div>
+  </div>
+<% end %>

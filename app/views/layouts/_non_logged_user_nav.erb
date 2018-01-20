@@ -1,3 +1,15 @@
-<li><%= link_to 'Новини', posts_path  %></li>
-<li><%= link_to 'Влез', new_user_session_path %></li>
-<li><%= link_to 'Регистрирай се', new_user_registration_path %></li>
+<li>
+  <%= link_to posts_path do %>
+    <i class="material-icons left">forum</i>
+    Новини
+  <% end %>
+</li>
+
+<li class="divider"></li>
+
+<li>
+  <%= link_to new_user_session_path do %>
+    <i class="material-icons left">input</i>
+    Влез
+  <% end %>
+</li>

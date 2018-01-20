@@ -1,3 +1,15 @@
-<li><%= link_to 'Новини', posts_path  %></li>
-<li><%= link_to 'Добави новина', new_post_path %></li>
-<li><%= link_to 'Излез', destroy_user_session_path, method: :delete %></li>
+<li>
+  <%= link_to posts_path do %>
+    <i class="material-icons left">forum</i>
+    Новини
+  <% end %>
+</li>
+
+<li class="divider"></li>
+
+<li>
+  <%= link_to destroy_user_session_path, method: :delete do %>
+    <i class="material-icons left">exit_to_app</i>
+    Излез
+  <% end %>
+</li>
