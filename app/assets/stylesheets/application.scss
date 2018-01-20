@@ -10,6 +10,34 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require jquery-ui
  *= require_tree .
  *= require_self
  */
+
+@import "materialize/components/color";
+
+$primary-color: color("teal", "base") !default;
+$light-primary-color: lighten($primary-color, 15%) !default;
+$dark-primary-color: darken($primary-color, 15%) !default;
+$secondary-color: color("teal", "accent-4") !default;
+
+$link-color: $secondary-color !default;
+$success-color: $secondary-color !default;
+$error-color: color("red", "darken-4") !default;
+
+$slider-indicator-color: $secondary-color !default;
+
+@import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}

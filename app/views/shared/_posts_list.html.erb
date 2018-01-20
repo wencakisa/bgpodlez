@@ -1,0 +1,18 @@
+<% @posts.each do |post| %>
+  <div class="col s12 m12 l4">
+    <div class="card">
+      <div class="card-image">
+        <%= image_tag 'underpass.png', alt: 'underpass' %>
+        <span class="card-title"><%= post.title %></span>
+        <%= link_to post, class: 'btn-floating halfway-fab waves-effect waves-light' do %>
+          <i class="material-icons">remove_red_eye</i>
+        <% end %>
+      </div>
+      <div class="card-content">
+        <p><%= truncate post.content, length: 120 %></p>
+        <p class="divider"></p>
+        <p class="grey-text">Добавено от: <%= post.user.email %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
