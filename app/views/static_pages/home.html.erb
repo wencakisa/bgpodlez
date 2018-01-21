@@ -1,3 +1,5 @@
+<% provide(:title, 'Начало') %>
+
 <div class="slider">
   <ul class="slides">
     <% @posts.take(3).each do |post| %>
@@ -16,7 +18,7 @@
 <div class="row"></div>
 
 <div class="row">
-  <div class="col s8 m8 offset-s2 offset-m2">
+  <div class="col s10 offset-s1 m8 offset-m2">
     <% if @posts.empty? %>
       <h4>Все още няма добавени новини ... :(</h4>
     <% else %>

@@ -1,7 +1,7 @@
 <% @posts.each do |post| %>
   <div class="col s12 m12 l4">
-    <div class="card">
-      <div class="card-image">
+    <div class="card hoverable">
+      <div class="card-image overlay">
         <%= image_tag post.image %>
         <span class="card-title"><%= post.title %></span>
         <%= link_to post, class: 'btn-floating halfway-fab waves-effect waves-light' do %>

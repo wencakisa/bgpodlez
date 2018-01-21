@@ -1,23 +1,27 @@
+<% provide(:title, 'Новини') %>
+
 <div class="row">
-  <div class="col s8 m8 offset-s2 offset-m2">
-    <h3 class="center">Всички новини</h3>
-    <%= render 'shared/posts_list' %>
+  <div class="col s10 m8 offset-s1 offset-m2">
+    <% if @posts.empty? %>
+      <h3 class="center">Все още няма добавени новини ... :(</h3>
+    <% else %>
+      <h3 class="center">Всички новини</h3>
+      <%= render 'shared/posts_list' %>
+    <% end %>
   </div>
 </div>
 
-<% if user_signed_in? %>
-  <!-- Element Showed -->
-  <div class="fixed-action-btn">
-    <%= link_to new_post_path, id: 'menu', class: 'btn-floating btn-large waves-effect waves-light' do %>
-      <i class="material-icons">mode_edit</i>
-    <% end %>
-  </div>
+<!-- Element Showed -->
+<div class="fixed-action-btn">
+  <%= link_to new_post_path, id: 'menu', class: 'btn-floating btn-large waves-effect waves-light' do %>
+    <i class="material-icons">mode_edit</i>
+  <% end %>
+</div>
 
-  <!-- Tap Target Structure -->
-  <div class="tap-target" data-activates="menu">
-    <div class="tap-target-content white-text">
-      <h5>Добави новина</h5>
-      <p>Кликни върху този бутон за да добавиш новина!</p>
-    </div>
+<!-- Tap Target Structure -->
+<div class="tap-target" data-activates="menu">
+  <div class="tap-target-content white-text">
+    <h5>Добави новина</h5>
+    <p>Кликни върху този бутон за да добавиш новина!</p>
   </div>
-<% end %>
+</div>
