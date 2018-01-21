@@ -41,3 +41,18 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+.overlay {
+  position: relative;
+  background: black;
+
+  .caption {
+    z-index: 2;
+    position: relative;
+  }
+
+  img {
+    z-index: 1;
+    opacity: 0.6;
+  }
+}

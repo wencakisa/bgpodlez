@@ -1,10 +1,11 @@
 <div class="slider">
   <ul class="slides">
     <% @posts.take(3).each do |post| %>
-      <li>
-        <%= image_tag 'underpass.png', alt: 'underpass' %>
+      <li class="overlay">
+        <%= image_tag post.image %>
         <div class="caption center-align">
-          <h3><%= post.title %></h3>
+          <h3 class="title"><%= post.title %></h3>
+          <div class="row"></div>
           <%= link_to 'Прочети повече', post, class: 'waves-effect waves-light btn-large' %>
         </div>
       </li>
@@ -17,10 +18,12 @@
 <div class="row">
   <div class="col s8 m8 offset-s2 offset-m2">
     <% if @posts.empty? %>
-      <h4>За жалост все още няма добавени новини ... :(</h4>
+      <h4>Все още няма добавени новини ... :(</h4>
     <% else %>
       <h4>Последни новини</h4>
       <%= render 'shared/posts_list' %>
     <% end %>
+
+    <h6 class="right-align"><%= link_to 'Виж всички', posts_path %></h6>
   </div>
 </div>

@@ -1,17 +1,29 @@
 <div class="row">
-  <%= form_with(model: post, local: true, class: 'col s12 m8 l8 offset-m2 offset-l2 center-align') do |form| %>
+  <%= form_with(model: post, local: true, class: 'col s12 m8 l8 offset-m2 offset-l2 center-align', multipart: true) do |form| %>
     <div class="row">
-      <div class="input-field col s12 m12 l12">
+      <div class="input-field col s12">
         <i class="material-icons prefix">font_download</i>
         <%= form.label :title, 'Заглавие' %>
         <%= form.text_field :title, id: :post_title %>
       </div>
     </div>
     <div class="row">
-      <div class="input-field col s12 m12 l12">
+      <div class="input-field col s12">
         <i class="material-icons prefix">comment</i>
-        <%= form.label :content %>
-        <%= form.text_area :content, id: :post_content, rows: 20, class: 'materialize-textarea' %>
+        <%= form.label :content, 'Съдържание' %>
+        <%= form.text_area :content, id: :post_content, class: 'materialize-textarea' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="file-field input-field col s12">
+        <div class="btn">
+            <span>Прикачи снимка</span>
+            <i class="material-icons">system_update_alt</i>
+            <%= form.file_field :image %>
+        </div>
+        <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+        </div>
       </div>
     </div>
     <div class="row">

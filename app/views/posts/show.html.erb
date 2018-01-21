@@ -1,19 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="parallax-container">
+  <div class="parallax overlay"><%= image_tag @post.image %></div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="section">
+  <div class="row container">
+    <h2 class="header"><%= @post.title %></h2>
+    <blockquote class="blockquote"><%= @post.content %></blockquote>
+  </div>
+  <div class="row container grey-text right-align">
+    Добавено от <i><%= @post.user.email %></i> на <i><%= @post.created_at.to_date %></i>
+  </div>
+</div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @post.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div class="parallax-container">
+  <div class="parallax overlay"><%= image_tag @post.image %></div>
+</div>
