@@ -9,8 +9,16 @@
     <h2 class="header"><%= @post.title %></h2>
     <blockquote class="blockquote"><%= @post.content %></blockquote>
   </div>
-  <div class="row container grey-text right-align">
-    Добавено от <i><%= @post.user.email %></i> на <i><%= @post.created_at.to_date %></i>
+
+  <div class="row">
+    <% if @post.user == current_user %>
+      <div class="container grey-text left-align">
+        <%= link_to 'Редактирай новина', edit_post_path(@post) %>
+      </div>
+    <% end %>
+    <div class="container grey-text right-align">
+      Добавено от <i><%= @post.user.email %></i> на <i><%= @post.created_at.to_date %></i>
+    </div>
   </div>
 </div>
 

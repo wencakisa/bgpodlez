@@ -1,6 +1,3 @@
-<h1>Editing Post</h1>
+<h3 class="center">Редактиране на <span class="grey-text">" <%= @post.title %> "</span></h2>
 
-<%= render 'form', post: @post %>
-
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<%= render 'form', post: @post, button_text: 'Редактирай новина' %>
